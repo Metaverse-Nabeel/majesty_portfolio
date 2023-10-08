@@ -1,12 +1,20 @@
-import { Data } from '../data'
-import Image from 'next/image'
+import Footer from "@/components/Footer";
+import Portfolio from "@/sections/Portfolio";
+import Sidebar from "@/components/Sidebar";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className='text-2xl '>Majesty Portfolio</h1>
-      
-      
-    </main>
-  )
+    <>
+      <main className="w-full h-screen bg-slate-300/40 grid grid-cols-10 gap-2">
+        <section className="col-span-2">
+        <Sidebar />
+        </section>
+        <section className="col-span-8">
+          <Portfolio />
+          <Footer />
+        </section>
+      </main>
+    </>
+  );
 }
