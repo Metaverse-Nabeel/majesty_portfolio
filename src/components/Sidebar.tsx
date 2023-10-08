@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="bg-gray-800 text-white h-screen w-1/6 flex flex-col items-center p-4 fixed">
+    <div className="bg-gray-800 text-white h-screen w-1/6 flex flex-col items-start fixed">
       {/* Profile Image */}
       <Image width={100} height={100}
         src="/images/profile_pic.jpg" 
@@ -11,17 +11,13 @@ const Sidebar: React.FC = () => {
         className="w-30 h-30 rounded-md mb-4"
       />
 
+      <h3 className='text-2xl my-4'>Portfolio</h3>
+
       {/* Menu Buttons */}
-      <nav className="flex flex-col items-start">
-        <Link href="#portfolio">
-          <li className="text-xl mb-2 hover:text-gray-400 cursor-pointer">Portfolio</li>
-        </Link>
-        <Link href="#about">
-          <li className="text-xl mb-2 hover:text-gray-400 cursor-pointer">About</li>
-        </Link>
-        <Link href="#contact">
-          <li className="text-xl mb-2 hover:text-gray-400 cursor-pointer">Contact</li>
-        </Link>
+      <nav className="w-full flex flex-col items-start">
+        <Link href="#portfolio" className="w-full text-xl py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer">Portfolio</Link>
+        <Link href="#about" className="w-full text-xl py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer">About</Link>
+        <Link href="#contact" className="w-full text-xl py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer">Contact</Link>
       </nav>
 
       {/* Social Media Icons */}
