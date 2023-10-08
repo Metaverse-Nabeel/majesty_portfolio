@@ -1,6 +1,6 @@
 const Footer: React.FC = () => {
   return (
-    <div>Footer</div>
+    <footer className="w-full h-20 text-white bg-black border-4 border-red-600">All rights reserved!</footer>
   )
 }
 
