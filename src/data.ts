@@ -6,6 +6,12 @@ interface Data {
   category: string;
 }
 
+interface Skill {
+  id: number;
+  label: string;
+  value: number;
+}
+
 export const Data: Data[] = [
   {
     id: 101,
@@ -223,5 +229,23 @@ export const Data: Data[] = [
     image: "/images/p6.jpg",
     desc: "Immerse yourself in the raw emotion and dynamic energy of abstract expressionism. Bold strokes and vivid colors collide, creating a captivating canvas that invites contemplation and introspection.",
     category: "art",
+  },
+];
+
+export const Skills: Skill[] = [
+  {
+    id: 1,
+    label: "Photography",
+    value: 95,
+  },
+  {
+    id: 2,
+    label: "Web Design",
+    value: 85,
+  },
+  {
+    id: 3,
+    label: "Photoshop",
+    value: 80,
   },
 ];
