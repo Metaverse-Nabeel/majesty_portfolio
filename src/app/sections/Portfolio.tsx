@@ -1,5 +1,5 @@
-import PaginatedItems from "@/components/Pagination";
-import PortfolioHeader from "@/components/PortfolioHeader";
+import PaginatedItems from "@/app/components/Pagination";
+import PortfolioHeader from "@/app/components/PortfolioHeader";
 
 const Portfolio: React.FC = () => {
   return (

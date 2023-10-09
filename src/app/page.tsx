@@ -1,6 +1,7 @@
-import Footer from "@/components/Footer";
-import Portfolio from "@/sections/Portfolio";
-import Sidebar from "@/components/Sidebar";
+import Footer from "@/app/components/Footer";
+import Portfolio from "@/app/sections/Portfolio";
+import Sidebar from "@/app/components/Sidebar";
+import AboutMe from "@/app/sections/AboutMe";
 
 
 export default function Home() {
@@ -10,8 +11,9 @@ export default function Home() {
         <section className="col-span-2">
         <Sidebar />
         </section>
-        <section className="col-span-8">
+        <section className="col-span-8 bg-gray-100">
           <Portfolio />
+          <AboutMe />
           <Footer />
         </section>
       </main>
