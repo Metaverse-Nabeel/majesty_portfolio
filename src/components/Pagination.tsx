@@ -28,10 +28,10 @@ function Items({ currentItems }: ItemsProps) {
         currentItems.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg overflow-hidden shadow-md"
+            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
           >
             <Image
-              className="w-full h-[250px] object-cover"
+              className="w-full h-[250px] object-cover hover:opacity-70"
               width={75}
               height={150}
               src={item.image}
