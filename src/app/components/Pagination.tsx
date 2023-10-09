@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Data } from "../data";
+import { Data } from "../../data";
 import ReactPaginate from "react-paginate";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
