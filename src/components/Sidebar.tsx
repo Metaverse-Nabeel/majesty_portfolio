@@ -15,24 +15,24 @@ const Sidebar: React.FC = () => {
   return (
     <div className="bg-white text-black h-screen w-1/5 flex flex-col items-start fixed">
       {/* Profile Image */}
-      <Image width={100} height={100}
+      <Image width={120} height={120}
         src="/images/profile_pic.jpg" 
         alt="Profile"
-        className="w-35 h-35 rounded-sm m-4"
+        className="rounded-sm m-4 mt-6"
       />
 
-      <h3 className='text-2xl uppercase mx-4 mt-4 mb-6'>Portfolio</h3>
+      <h3 className='text-xl font-semibold uppercase mx-4 mt-4 mb-6'>Portfolio</h3>
 
       {/* Menu Buttons */}
       <nav className="w-full flex flex-col items-start">
-        <Link href="#portfolio" className="w-full flex items-center text-xl py-2 px-4 text-[#009688] mb-2 hover:bg-gray-400 hover:text-black cursor-pointer uppercase">
-          <FontAwesomeIcon icon={faGripfire} className='text-xl mr-4' />
+        <Link href="#portfolio" className="w-full flex items-center text-md py-2 px-4 text-[#009688] mb-2 hover:bg-gray-400 hover:text-black cursor-pointer uppercase">
+          <FontAwesomeIcon icon={faGripfire} className='text-md mr-4' />
           Portfolio</Link>
-        <Link href="#about" className="w-full text-xl py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer uppercase">
-        <FontAwesomeIcon icon={faUser} className='text-xl mr-4' />  
+        <Link href="#about" className="w-full text-md py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer uppercase">
+        <FontAwesomeIcon icon={faUser} className='text-md mr-4' />  
           About</Link>
-        <Link href="#contact" className="w-full text-xl py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer uppercase">
-          <FontAwesomeIcon icon={faEnvelope} className='text-xl mr-4' />
+        <Link href="#contact" className="w-full text-md py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer uppercase">
+          <FontAwesomeIcon icon={faEnvelope} className='text-md mr-4' />
           Contact</Link>
       </nav>
 
@@ -40,22 +40,22 @@ const Sidebar: React.FC = () => {
       <div className="mt-6 mx-4 flex space-x-2">
         {/* Add your social media icons here */}
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faSquareXTwitter} className='text-2xl hover:opacity-50 hover:text-3xl' />
+          <FontAwesomeIcon icon={faSquareXTwitter} className='text-lg hover:opacity-50 hover:text-xl' />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faLinkedin} className='text-2xl hover:opacity-50 hover:text-3xl' />
+          <FontAwesomeIcon icon={faLinkedin} className='text-lg hover:opacity-50 hover:text-xl' />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} className='text-2xl hover:opacity-50 hover:text-3xl' />
+          <FontAwesomeIcon icon={faGithub} className='text-lg hover:opacity-50 hover:text-xl' />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faDribbble} className='text-2xl hover:opacity-50 hover:text-3xl' />
+          <FontAwesomeIcon icon={faDribbble} className='text-lg hover:opacity-50 hover:text-xl' />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faPinterest} className='text-2xl hover:opacity-50 hover:text-3xl' />
+          <FontAwesomeIcon icon={faPinterest} className='text-lg hover:opacity-50 hover:text-xl' />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faInstagram} className='text-2xl hover:opacity-50 hover:text-3xl' />
+          <FontAwesomeIcon icon={faInstagram} className='text-lg hover:opacity-50 hover:text-xl' />
         </a>
       </div>
     </div>

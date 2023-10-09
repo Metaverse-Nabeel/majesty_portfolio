@@ -1,17 +1,15 @@
-import ProjectCard from "@/components/ProjectCard"
+import PaginatedItems from "@/components/Pagination";
+import PortfolioHeader from "@/components/PortfolioHeader";
 
 const Portfolio: React.FC = () => {
   return (
-    <section className="flex min-h-screen flex-col justify-between" id="portfolio">
-      <h2 className='text-4xl mb-4'>Majesty Portfolio</h2>
-      <div className="flex">
-        Filters: Design, Art and Photos
-      </div>
-      <div className="w-full">
-      <ProjectCard />      
-      </div>
+    <section className="flex min-h-screen flex-col" id="portfolio">
+      <PortfolioHeader />
+      
+          <PaginatedItems itemsPerPage={6} />
+        
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;
