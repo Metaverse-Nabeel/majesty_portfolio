@@ -11,6 +11,16 @@ interface Skill {
   label: string;
   value: number;
 }
+interface Package {
+  id: number;
+  title: string;
+  label: string;
+  category: string;
+  capacity: string;
+  support: string;
+  price: number;
+  color: string;
+}
 
 export const Data: Data[] = [
   {
@@ -247,5 +257,37 @@ export const Skills: Skill[] = [
     id: 3,
     label: "Photoshop",
     value: 80,
+  },
+];
+export const PackagesData: Package[] = [
+  {
+    id: 1,
+    title: "Basic",
+    label: "Web Design",
+    category: "Photography",
+    capacity: "1GB Storage",
+    support: "Mail Support",
+    price: 10,
+    color: "#616161",
+  },
+  {
+    id: 2,
+    title: "Pro",
+    label: "Web Design",
+    category: "Photography",
+    capacity: "50GB Storage",
+    support: "Endless Support",
+    price: 25,
+    color: "#009688",
+  },
+  {
+    id: 3,
+    title: "Premium",
+    label: "Web Design",
+    category: "Photography",
+    capacity: "Unlimited Storage",
+    support: "Endless Support",
+    price: 50,
+    color: "#616161",
   },
 ];
