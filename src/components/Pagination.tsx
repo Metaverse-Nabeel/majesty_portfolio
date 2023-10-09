@@ -1,9 +1,11 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import { Data } from '../data'
-import ReactPaginate from 'react-paginate';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { Data } from "../data";
+import ReactPaginate from "react-paginate";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 
 interface item {
@@ -24,13 +26,22 @@ function Items({ currentItems }: ItemsProps) {
     <>
       {currentItems &&
         currentItems.map((item) => (
-          <div key={item.id} className="bg-white rounded-lg overflow-hidden shadow-md">
-          <Image className="w-full h-[250px] object-cover" width={75} height={150} src={item.image} alt={item.title} />
-          <div className="p-4">
-            <h2 className="text-xl font-bold mb-2">{item.title}</h2>
-            <p className="text-gray-700 mb-2">{item.desc}</p>
+          <div
+            key={item.id}
+            className="bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <Image
+              className="w-full h-[250px] object-cover"
+              width={75}
+              height={150}
+              src={item.image}
+              alt={item.title}
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-bold mb-2">{item.title}</h2>
+              <p className="text-gray-700 mb-2">{item.desc}</p>
+            </div>
           </div>
-        </div>
         ))}
     </>
   );
@@ -49,31 +60,37 @@ export default function PaginatedItems({ itemsPerPage }: PaginatedItemsProps) {
   // (This could be items from props; or items loaded in a local state
   // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+//   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event: { selected: number }) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    // console.log(
+    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
+    // );
     setItemOffset(newOffset);
   };
 
   return (
     <>
-      <Items currentItems={currentItems} />
+      <section className="flex w-full flex-col items-center justify-between px-4">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Items currentItems={currentItems} />
+        </div>
+      </section>
       <ReactPaginate
         breakLabel="..."
-        nextLabel=">>"
+        pageClassName="px-2 text-xl rounded-md hover:bg-black hover:text-white"
+        nextLabel={<FontAwesomeIcon icon={faAnglesRight} />}
         onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={10}
         pageCount={pageCount}
-        previousLabel="<<"
+        previousLabel={<FontAwesomeIcon icon={faAnglesLeft} />}
         renderOnZeroPageCount={null}
-        className='h-10 flex flex-wrap space-x-4 justify-center'
+        className="flex flex-wrap space-x-4 items-center justify-center my-8"
+        activeClassName="bg-black text-white"
         />
     </>
   );
