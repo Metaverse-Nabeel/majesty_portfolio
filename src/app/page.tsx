@@ -3,6 +3,7 @@ import Portfolio from "@/app/sections/Portfolio";
 import Sidebar from "@/app/components/Sidebar";
 import AboutMe from "@/app/sections/AboutMe";
 import Packages from "./sections/Packages";
+import Contact from "./sections/Contact";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           <Portfolio />
           <AboutMe />
           <Packages/>
+          <Contact/>
           <Footer />
         </section>
       </main>
