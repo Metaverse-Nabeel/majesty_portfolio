@@ -291,3 +291,18 @@ export const PackagesData: Package[] = [
     color: "#616161",
   },
 ];
+
+export const Tags: string[] = [
+  "Travel",
+  "New York",
+  "London",
+  "Ikea",
+  "Norway",
+  "DIY",
+  "Ideas",
+  "Baby",
+  "Clothing",
+  "Shopping",
+  "Sports",
+  "Games",
+];
