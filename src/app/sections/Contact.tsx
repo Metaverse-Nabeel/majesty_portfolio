@@ -54,8 +54,8 @@ const Contact = () => {
         <div className="w-full flex flex-col rounded-md py-8">
           <form
             action="https://formsubmit.co/nabeelahmed3129@gmail.com"
-            className="w-full pt-4 px-4"
             method="POST"
+            className="w-full pt-4 px-4"
           >
             <div className="mb-4">
               <label htmlFor="name">Name</label>
@@ -83,7 +83,8 @@ const Contact = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="message">Message</label>
-              <textarea
+              <input
+                type="text"
                 name="message"
                 placeholder="Write your message here..."
                 value={formData.message}
