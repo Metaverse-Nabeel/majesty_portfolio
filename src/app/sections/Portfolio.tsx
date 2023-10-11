@@ -3,7 +3,7 @@ import PortfolioHeader from "@/app/components/PortfolioHeader";
 
 const Portfolio: React.FC = () => {
   return (
-    <section className="flex min-h-screen flex-col" id="portfolio">
+    <section className="flex flex-col" id="portfolio">
       <PortfolioHeader />
       
           <PaginatedItems itemsPerPage={6} />
