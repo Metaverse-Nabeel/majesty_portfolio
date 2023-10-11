@@ -9,7 +9,7 @@ const AboutMe = () => {
   return (
     <section id="about" className="w-full flex flex-col px-4">
         <div className="flex justify-center items-center bg-white rounded-lg mb-6">
-            <Image width={500} height={450}
+            <Image width={500} height={500}
             src="/images/about_pic.jpg" 
             alt="Profile"
             className="rounded-sm m-4"
