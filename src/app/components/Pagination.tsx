@@ -51,7 +51,6 @@ interface PaginatedItemsProps {
 
 export default function PaginatedItems({ itemsPerPage }: PaginatedItemsProps) {
   const items = useAppSelector(state => state.projects.projects);
-  console.log(items);
 
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
