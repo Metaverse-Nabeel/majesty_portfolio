@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import projectsSlice from "./slices/projectsSlice";
+import sidebarSlice from "./slices/sidebarSlice";
 // ...
 
 export const store = configureStore({
   reducer: {
     projects: projectsSlice,
+    activeItem: sidebarSlice,
   },
 });
 

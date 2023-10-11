@@ -1,3 +1,4 @@
+"use client"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,8 +11,12 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faDribbble } from '@fortawesome/free-brands-svg-icons/faDribbble';
 import { faPinterest } from '@fortawesome/free-brands-svg-icons/faPinterest';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { changeActiveItem } from '../store/slices/sidebarSlice';
 
 const Sidebar: React.FC = () => {
+  let active = useAppSelector(state => state.activeItem.item);
+  const dispatch = useAppDispatch();
   return (
     <div className="bg-white text-black h-screen w-1/5 flex flex-col items-start fixed">
       {/* Profile Image */}
@@ -25,13 +30,13 @@ const Sidebar: React.FC = () => {
 
       {/* Menu Buttons */}
       <nav className="w-full flex flex-col items-start">
-        <Link href="#portfolio" className="w-full flex items-center text-md py-2 px-4 text-[#009688] mb-2 hover:bg-gray-400 hover:text-black cursor-pointer uppercase">
+        <Link href="#portfolio" className={`w-full flex items-center text-md py-2 px-4 ${active === "portfolio" ? 'text-[#009688]' : ""} mb-2 hover:bg-gray-400 hover:text-black cursor-pointer uppercase`} onClick={()=> dispatch(changeActiveItem({type: "active", item: "portfolio"}))}>
           <FontAwesomeIcon icon={faGripfire} className='text-md mr-4' />
           Portfolio</Link>
-        <Link href="#about" className="w-full text-md py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer uppercase">
+        <Link href="#about" className={`w-full text-md py-2 px-4 ${active === "about" ? 'text-[#009688]' : ""}  mb-2 hover:bg-gray-400  cursor-pointer uppercase`} onClick={()=> dispatch(changeActiveItem({type: "active", item: "about"}))}>
         <FontAwesomeIcon icon={faUser} className='text-md mr-4' />  
           About</Link>
-        <Link href="#contact" className="w-full text-md py-2 px-4  mb-2 hover:bg-gray-400  cursor-pointer uppercase">
+        <Link href="#contact" className={`w-full text-md py-2 px-4 ${active === "contact" ? 'text-[#009688]' : ""}  mb-2 hover:bg-gray-400  cursor-pointer uppercase`} onClick={()=> dispatch(changeActiveItem({type: "active", item: "contact"}))}>
           <FontAwesomeIcon icon={faEnvelope} className='text-md mr-4' />
           Contact</Link>
       </nav>
