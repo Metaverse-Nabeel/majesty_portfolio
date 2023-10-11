@@ -20,6 +20,7 @@ interface ItemsProps {
 }
 
 function Items({ currentItems }: ItemsProps) {
+  
   return (
     <>
       {currentItems &&

@@ -17,6 +17,7 @@ import { changeActiveItem } from '../store/slices/sidebarSlice';
 const Sidebar: React.FC = () => {
   let active = useAppSelector(state => state.activeItem.item);
   const dispatch = useAppDispatch();
+  
   return (
     <div className="bg-white text-black h-screen w-1/5 flex flex-col items-start fixed">
       {/* Profile Image */}
