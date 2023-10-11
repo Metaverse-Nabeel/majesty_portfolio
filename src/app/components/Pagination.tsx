@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { Data } from "../../data";
 import ReactPaginate from "react-paginate";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-
+import { useAppSelector } from "../store/hooks";
 
 interface item {
   id: number;
@@ -15,7 +14,6 @@ interface item {
   desc: string;
   category: string;
 }
-const items: item[] = Data;
 
 interface ItemsProps {
   currentItems: item[];
@@ -52,6 +50,9 @@ interface PaginatedItemsProps {
 }
 
 export default function PaginatedItems({ itemsPerPage }: PaginatedItemsProps) {
+  const items = useAppSelector(state => state.projects.projects);
+  console.log(items);
+
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);

@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="flex flex-col bg-[#616161]/60 w-full px-4">
+      <section className="flex flex-col bg-[#616161]/60 w-full px-4" id="contact">
         <h4 className="text-2xl font-semibold py-6">Contact Me</h4>
         <div className="flex items-center justify-center w-[100%] text-white py-6">
           <div className="w-1/3 flex flex-col gap-2 bg-[#616161] py-4 px-16">
