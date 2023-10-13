@@ -20,7 +20,6 @@ interface ItemsProps {
 }
 
 function Items({ currentItems }: ItemsProps) {
-  
   return (
     <>
       {currentItems &&
@@ -51,30 +50,28 @@ interface PaginatedItemsProps {
 }
 
 export default function PaginatedItems({ itemsPerPage }: PaginatedItemsProps) {
-  const items = useAppSelector(state => state.projects.projects);
+  const items = useAppSelector((state) => state.projects.projects);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(items.length / itemsPerPage);
 
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
-     const endOffset = itemOffset + itemsPerPage;
-   //   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-     const currentItems = items.slice(itemOffset, endOffset);
-     const pageCount = Math.ceil(items.length / itemsPerPage);
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
-
-
-  // Invoke when user click to request another page.
-  const handlePageClick = (event: { selected: number }) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    // console.log(
-    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
-    // );
-    setItemOffset(newOffset);
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   return (
@@ -84,18 +81,26 @@ export default function PaginatedItems({ itemsPerPage }: PaginatedItemsProps) {
           <Items currentItems={currentItems} />
         </div>
       </section>
-      <ReactPaginate
-        breakLabel="..."
-        pageClassName="px-2 text-xl rounded-md hover:bg-black hover:text-white"
-        nextLabel={<FontAwesomeIcon icon={faAnglesRight} />}
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={10}
-        pageCount={pageCount}
-        previousLabel={<FontAwesomeIcon icon={faAnglesLeft} />}
-        renderOnZeroPageCount={null}
-        className="flex flex-wrap space-x-4 items-center justify-center my-8"
-        activeClassName="bg-black text-white"
-        />
+      <div className="my-8">
+        {/* Pagination */}
+        <ul className="flex flex-wrap space-x-4 items-center justify-center cursor-pointer">
+          <li className="px-2 text-xl rounded-md hover:bg-black hover:text-white" onClick={handlePrevPage}>
+            <FontAwesomeIcon icon={faAnglesLeft} />
+          </li>
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <li
+              key={index}
+              className={`${index + 1 === currentPage ? "bg-black text-white rounded-md" : ""} px-2 text-xl rounded-md hover:bg-black hover:text-white`}
+              onClick={() => handlePageChange(index + 1)}
+            >
+              {index + 1}
+            </li>
+          ))}
+          <li className="px-2 text-xl rounded-md hover:bg-black hover:text-white" onClick={handleNextPage}>
+            <FontAwesomeIcon icon={faAnglesRight} />
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
