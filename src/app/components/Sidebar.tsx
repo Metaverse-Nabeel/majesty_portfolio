@@ -139,11 +139,11 @@ const Sidebar: React.FC = () => {
       </div>
       {/* Hamburger Icon for Mobile */}
       <div
-        className="lg:hidden cursor-pointer fixed z-10 w-full h-[5%] flex justify-between items-center mt-8"
+        className="lg:hidden cursor-pointer fixed z-30 w-full h-[5%] flex justify-between items-center mt-8"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
-          <div className="flex w-[100vw] justify-end items-center mt-8">
+          <div className="flex w-[100vw] justify-end items-center mt-8 px-6">
             <FontAwesomeIcon icon={faTimes} className="text-3xl" />
           </div>
         ) : (
