@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="w-full h-20 bg-black flex items-center justify-center mt-8">
-        <p className="py-4 cursor-pointer"><Link href={'https://nabeel-digital.vercel.app/'} target="blank"> Made with <FontAwesomeIcon icon={faHeart} className="hover:text-red-600 hover:text-xl"/> by Nabeel Ahmed</Link></p>
+        <p className="py-4 cursor-pointer"><Link href={'https://nabeel-digital.vercel.app/'} target="blank"> Made with <FontAwesomeIcon icon={faHeart} className="hover:text-red-600 hover:text-xl"/> by Rizwan Ahmed</Link></p>
       </div>
     </footer>
   )
