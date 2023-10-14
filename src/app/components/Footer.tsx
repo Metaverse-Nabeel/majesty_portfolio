@@ -7,7 +7,7 @@ import Link from "next/link"
 const Footer: React.FC = () => {
   return (
     <footer className="w-full text-white bg-[#616161] pt-8">
-      <div className="flex gap-8 px-6">
+      <div className="flex flex-col md:flex-row gap-8 px-6">
         <div className="flex flex-col">
           <h4 className="text-3xl py-4">
             Thank you for visiting my portfolio!
