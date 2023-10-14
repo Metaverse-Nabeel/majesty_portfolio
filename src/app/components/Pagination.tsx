@@ -84,19 +84,19 @@ export default function PaginatedItems({ itemsPerPage }: PaginatedItemsProps) {
       <div className="my-8">
         {/* Pagination */}
         <ul className="flex flex-wrap space-x-4 items-center justify-center cursor-pointer">
-          <li className="px-2 text-xl rounded-md hover:bg-black hover:text-white" onClick={handlePrevPage}>
+          <li className="px-1 sm:px-2 sm:text-xl rounded-md hover:bg-black hover:text-white" onClick={handlePrevPage}>
             <FontAwesomeIcon icon={faAnglesLeft} />
           </li>
           {Array.from({ length: totalPages }).map((_, index) => (
             <li
               key={index}
-              className={`${index + 1 === currentPage ? "bg-black text-white rounded-md" : ""} px-2 text-xl rounded-md hover:bg-black hover:text-white`}
+              className={`${index + 1 === currentPage ? "bg-black text-white rounded-md" : ""} px-1 sm:px-2 sm:text-xl rounded-md hover:bg-black hover:text-white`}
               onClick={() => handlePageChange(index + 1)}
             >
               {index + 1}
             </li>
           ))}
-          <li className="px-2 text-xl rounded-md hover:bg-black hover:text-white" onClick={handleNextPage}>
+          <li className="px-1 sm:px-2 sm:text-xl rounded-md hover:bg-black hover:text-white" onClick={handleNextPage}>
             <FontAwesomeIcon icon={faAnglesRight} />
           </li>
         </ul>
