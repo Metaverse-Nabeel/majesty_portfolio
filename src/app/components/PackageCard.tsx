@@ -14,7 +14,7 @@ interface PackageData {
 
 const PackageCard: React.FC<PackageData> = ({packageData}) => {
   return (
-    <div className="flex flex-col w-5/6 mb-16 opacity-70 hover:opacity-100 cursor-pointer">
+    <div className="flex flex-col w-full mb-16 opacity-70 hover:opacity-100 cursor-pointer">
       <p className={`w-[95%] text-white text-2xl flex items-center justify-center py-7`} style={{backgroundColor: `${packageData.color}`}}>{packageData.title}</p>
       <p className="w-[95%] bg-white flex items-center justify-center py-4 border-2 border-b-0 border-gray-400">{packageData.label}</p>
       <p className="w-[95%] bg-white flex items-center justify-center py-4 border-2 border-b-0 border-gray-400">{packageData.category}</p>
