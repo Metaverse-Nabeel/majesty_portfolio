@@ -11,7 +11,7 @@ const PortfolioHeader = () => {
 
   return (
     <>
-      <div className="flex flex-col md:mt-36">
+      <div className="flex flex-col">
         <h1 className="text-[36px] px-4 py-4 font-semibold">My Portfolio</h1>
       <div className="lg:flex md:flex md:flex-wrap sm:flex-wrap space-y-2 space-x-2 items-center justify-start px-4 py-2 text-xl">
         <p className="text-md mr-4">Filters:</p>
