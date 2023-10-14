@@ -30,20 +30,20 @@ const Contact = () => {
     <>
       <section className="flex flex-col bg-[#616161]/60 w-full px-4" id="contact">
         <h4 className="text-2xl font-semibold py-6">Contact Me</h4>
-        <div className="flex items-center justify-center w-[100%] text-white py-6">
-          <div className="w-1/3 flex flex-col gap-2 bg-[#616161] py-4 px-16">
+        <div className="flex-col md:flex md:flex-row items-center justify-center w-[100%] text-white py-6">
+          <div className="w-full flex flex-col justify-center items-center gap-2 bg-[#616161] py-4 px-16 md:px-8">
             <FontAwesomeIcon icon={faEnvelope} className="text-4xl" />
             <p className="flex items-center justify-center text-xl">
               email@email.com
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-2 bg-[#009688] py-4 px-16">
+          <div className="w-full flex flex-col justify-center items-center gap-2 bg-[#009688] py-4 px-16 md:px-8">
             <FontAwesomeIcon icon={faLocation} className="text-4xl" />
             <p className="flex items-center justify-center text-xl">
               Chicago, US
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-2 bg-[#616161] py-4 px-16">
+          <div className="w-full flex flex-col justify-center items-center gap-2 bg-[#616161] py-4 px-16 md:px-8">
             <FontAwesomeIcon icon={faPhone} className="text-4xl" />
             <p className="flex items-center justify-center text-xl">
               +92-321-5674724
