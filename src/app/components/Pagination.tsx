@@ -28,9 +28,9 @@ function Items({ currentItems }: ItemsProps) {
             className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
           >
             <Image
-              className="w-full h-[250px] object-cover hover:opacity-70"
-              width={75}
-              height={113}
+              className="object-cover hover:opacity-70"
+              width={450}
+              height={250}
               src={item.image}
               alt={item.title}
               quality={100}
