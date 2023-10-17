@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import ReactPaginate from "react-paginate";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
@@ -29,11 +28,12 @@ function Items({ currentItems }: ItemsProps) {
             className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
           >
             <Image
-              className="w-full h-[250px] object-cover hover:opacity-70"
-              width={75}
-              height={150}
+              className="object-cover hover:opacity-70"
+              width={450}
+              height={250}
               src={item.image}
               alt={item.title}
+              quality={100}
             />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">{item.title}</h2>
