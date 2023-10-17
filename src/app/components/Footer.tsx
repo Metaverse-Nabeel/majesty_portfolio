@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <h4 className="text-3xl py-4">
             Thank you for visiting my portfolio!
           </h4>
-          <p>I&apos;m passionate about creating meaningful and impactful experiences through design and development. Whether it&apos;s crafting intuitive user interfaces or diving into complex coding challenges, I thrive on turning ideas into reality. Let&apos;s connect and explore how we can collaborate to bring your projects to life. Feel free to reach out—I&apos;m always excited about new opportunities and creative ventures.</p>
+          <p>As an independent artist, I am committed to nurturing my craft and pushing creative boundaries. I believe that art has the power to inspire, provoke thought, and spark conversations. I am always open to new opportunities for artistic collaborations, exhibitions, and commissions, as I&apos; am dedicated to sharing my passion with a wider audience. Art helps me express myself as a glow and developer. I enjoy trying new art styles.</p>
         </div>
         <div className="flex flex-col">
           <h4 className="text-3xl uppercase py-4">

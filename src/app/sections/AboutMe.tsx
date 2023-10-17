@@ -16,7 +16,8 @@ const AboutMe = () => {
             />
         </div>
         <h2 className="font-bold text-2xl mb-2">About Me</h2>
-        <p className="text-lg font-light text-justify mb-6">Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p className="text-lg font-light text-justify mb-6">Independent Visual Artist!<br></br>[Veronica Majesty Nakalanzi]<br></br> I am Veronica Majesty, a passionate and self-driven independent visual artist based in the United States. My artistic journey has been a pursuit of creative expression, and I thrive on translating thoughts, emotions, and experiences into captivating visual narratives. With a deep appreciation for diverse mediums, I am constantly exploring new techniques to push the boundaries of my artistry.
+</p>
         <h4 className="py-2 text-xl">Technical Skills</h4>
         <div className="flex flex-col">
         {
