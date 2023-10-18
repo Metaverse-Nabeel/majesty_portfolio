@@ -26,9 +26,10 @@ const AboutMe = () => {
             )
         }
         </div>
-        <div className="flex w-full lg:w-1/3 my-8">
+        {/* Download Resume button disabled */}
+        {/* <div className="flex w-full lg:w-1/3 my-8">
           <Link href="/Resume.pdf" target={"_blank"}className="px-4 py-4 bg-black text-white border-2 border-transparent hover:bg-white hover:border-black hover:text-black rounded-md" download={true}><FontAwesomeIcon icon={faDownload} className="mr-4" /> Download Resume</Link>
-        </div>
+        </div> */}
     </section>
   )
 }
