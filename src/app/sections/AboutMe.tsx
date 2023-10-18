@@ -19,7 +19,7 @@ const AboutMe = () => {
         <p className="text-lg font-light text-justify mb-6">Independent Visual Artist!<br></br>[Veronica Majesty Nakalanzi]<br></br> I am Veronica Majesty, a passionate and self-driven independent visual artist based in the United States. My artistic journey has been a pursuit of creative expression, and I thrive on translating thoughts, emotions, and experiences into captivating visual narratives. With a deep appreciation for diverse mediums, I am constantly exploring new techniques to push the boundaries of my artistry.
 </p>
         <h4 className="py-2 text-xl">Technical Skills</h4>
-        <div className="flex flex-col">
+        <div className="flex flex-col my-8">
         {
             Skills.map((skill)=>
                 <Skill label={skill.label} value={skill.value} key={skill.id} />
