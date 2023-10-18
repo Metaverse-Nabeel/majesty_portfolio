@@ -26,16 +26,13 @@ export const Data: Data[] = [
   {
     id: 101,
     title: "The Gold Goddess Sun vs Moon",
-    //image: "/images/p1.jpg",
     image: "/images/art41.png",
-
     desc: "African Queens Of Gold",
     category: "design",
   },
   {
     id: 102,
     title: "The Gold Goddess Sun vs Moon",
-    //image: "/images/p2.jpg",
     image: "/images/art46.png",
     desc: "African Queens Of Gold",
     category: "photos",
@@ -43,7 +40,6 @@ export const Data: Data[] = [
   {
     id: 103,
     title: "The Gold Goddess Sun vs Moon",
-    //image: "/images/p5.jpg",
     image: "/images/art49.png",
     desc: "African Queens Of Gold",
     category: "art",
@@ -79,7 +75,7 @@ export const Data: Data[] = [
   {
     id: 108,
     title: "The Gold Goddess Sun vs Moon",
-    image: "/images/art12.png", 
+    image: "/images/art12.png",
     desc: "African Queens Of Gold",
     category: "photos",
   },
@@ -469,9 +465,6 @@ export const Data: Data[] = [
     desc: "Sketch Art",
     category: "art",
   },
-  
-  
-
 ];
 
 export const Skills: Skill[] = [
