@@ -29,7 +29,7 @@ const Contact = () => {
         <h4 className="text-2xl font-semibold py-4">Contact Me</h4>
         <div className="w-full flex flex-col rounded-md py-4">
           <form
-            action="https://formsubmit.co/nabeelahmed3129@gmail.com"
+            action="https://formsubmit.co/bonefunny34@gmail.com"
             method="POST"
             className="w-full pt-4 px-4"
           >
