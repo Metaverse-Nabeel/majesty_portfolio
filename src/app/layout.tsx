@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Majesty Portfolio",
+  title: "Majesty-portfolio.Veronica.app",
   description:
     "Personal Portfolio website for design, art and photos. It is a landing page. It contains contact, bolgs and projects sections.",
 };
