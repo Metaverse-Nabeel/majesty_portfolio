@@ -10,7 +10,7 @@ const AboutMe = () => {
     <section id="about" className="w-full flex flex-col px-4">
         <div className="flex justify-center items-center bg-white rounded-lg mb-6">
             <Image width={500} height={500} quality={100}
-            src="/images/about_pic.jpg" 
+            src="/images/about_pic.png" 
             alt="Profile"
             className="rounded-sm m-4"
             />
@@ -26,10 +26,6 @@ const AboutMe = () => {
             )
         }
         </div>
-        {/* Download Resume button disabled */}
-        {/* <div className="flex w-full lg:w-1/3 my-8">
-          <Link href="/Resume.pdf" target={"_blank"}className="px-4 py-4 bg-black text-white border-2 border-transparent hover:bg-white hover:border-black hover:text-black rounded-md" download={true}><FontAwesomeIcon icon={faDownload} className="mr-4" /> Download Resume</Link>
-        </div> */}
     </section>
   )
 }

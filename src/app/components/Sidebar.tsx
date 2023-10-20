@@ -3,14 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { faUser, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faGripfire } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGripfire } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { faSquareXTwitter } from "@fortawesome/free-brands-svg-icons/faSquareXTwitter";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { faDribbble } from "@fortawesome/free-brands-svg-icons/faDribbble";
 import { faPinterest } from "@fortawesome/free-brands-svg-icons/faPinterest";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { changeActiveItem } from "../store/slices/sidebarSlice";
 import { useState } from "react";
@@ -32,7 +28,7 @@ const Sidebar: React.FC = () => {
         <Image
           width={120}
           height={120}
-          src="/images/profile_pic.jpg"
+          src="/images/profile_pic.png"
           alt="Profile"
           className="rounded-sm m-4 mt-6"
         />
@@ -41,7 +37,7 @@ const Sidebar: React.FC = () => {
           <Image
             width={120}
             height={120}
-            src="/images/profile_pic.jpg"
+            src="/images/profile_pic.png"
             alt="Profile"
             className="rounded-sm m-4 mt-6"
           />
@@ -98,42 +94,36 @@ const Sidebar: React.FC = () => {
           {/* Social Media Icons */}
           <div className="mt-6 mx-4 flex space-x-2">
             {/* Add your social media icons here */}
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon
-                icon={faSquareXTwitter}
-                className="text-lg hover:opacity-50 hover:text-xl"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="text-lg hover:opacity-50 hover:text-xl"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="text-lg hover:opacity-50 hover:text-xl"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon
-                icon={faDribbble}
-                className="text-lg hover:opacity-50 hover:text-xl"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon
-                icon={faPinterest}
-                className="text-lg hover:opacity-50 hover:text-xl"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-lg hover:opacity-50 hover:text-xl"
-              />
-            </a>
+            <Link
+                href="https://www.pinterest.com/StuffYourGifts/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faPinterest}
+                  className="text-lg hover:opacity-50 hover:text-xl"
+                />
+              </Link>
+              <Link
+                href="https://playgroundai.com/profile/clk32rupb00ies601qezhhxtn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faDiscord}
+                  className="text-lg hover:opacity-50 hover:text-xl"
+                />
+              </Link>
+              <Link
+                href="https://twitter.com/Stuffyourgifts"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faSquareXTwitter}
+                  className="text-lg hover:opacity-50 hover:text-xl"
+                />
+              </Link>
           </div>
         </div>
       </div>
@@ -147,12 +137,12 @@ const Sidebar: React.FC = () => {
             <FontAwesomeIcon icon={faTimes} className="text-3xl" />
           </div>
         ) : (
-          <div className="flex w-[100vw] h-[15vh] px-6 justify-between items-center">
+          <div className="flex w-[100vw] h-[5vh] px-6 justify-between items-center mt-4">
             <FontAwesomeIcon icon={faBars} className="text-3xl" />
             <Image
               width={80}
               height={80}
-              src="/images/profile_pic.jpg"
+              src="/images/profile_pic.png"
               alt="Profile"
               className="rounded-full"
             />
@@ -167,7 +157,7 @@ const Sidebar: React.FC = () => {
             <Image
               width={150}
               height={150}
-              src="/images/profile_pic.jpg"
+              src="/images/profile_pic.png"
               alt="Profile"
               className="rounded-md m-4 mt-6"
             />
@@ -223,42 +213,36 @@ const Sidebar: React.FC = () => {
             {/* Social Media Icons */}
             <div className="mt-6 mx-4 flex space-x-2">
               {/* Add your social media icons here */}
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon
-                  icon={faSquareXTwitter}
-                  className="text-lg hover:opacity-50 hover:text-xl"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="text-lg hover:opacity-50 hover:text-xl"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="text-lg hover:opacity-50 hover:text-xl"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon
-                  icon={faDribbble}
-                  className="text-lg hover:opacity-50 hover:text-xl"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.pinterest.com/StuffYourGifts/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faPinterest}
                   className="text-lg hover:opacity-50 hover:text-xl"
                 />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link
+                href="https://playgroundai.com/profile/clk32rupb00ies601qezhhxtn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
-                  icon={faInstagram}
+                  icon={faDiscord}
                   className="text-lg hover:opacity-50 hover:text-xl"
                 />
-              </a>
+              </Link>
+              <Link
+                href="https://twitter.com/Stuffyourgifts"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faSquareXTwitter}
+                  className="text-lg hover:opacity-50 hover:text-xl"
+                />
+              </Link>
             </div>
           </div>
         </div>
