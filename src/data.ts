@@ -475,13 +475,13 @@ export const Skills: Skill[] = [
   },
   {
     id: 2,
-    label: "Web Design",
-    value: 85,
+    label: "Painting",
+    value: 89,
   },
   {
     id: 3,
-    label: "Photoshop",
-    value: 80,
+    label: "AI Creations",
+    value: 87,
   },
 ];
 export const PackagesData: Package[] = [
