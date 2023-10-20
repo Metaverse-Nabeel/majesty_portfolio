@@ -10,7 +10,7 @@ const AboutMe = () => {
     <section id="about" className="w-full flex flex-col px-4">
         <div className="flex justify-center items-center bg-white rounded-lg mb-6">
             <Image width={500} height={500} quality={100}
-            src="/images/about_pic.jpg" 
+            src="/images/about_pic.png" 
             alt="Profile"
             className="rounded-sm m-4"
             />
